@@ -1,0 +1,125 @@
+/* Dark mode styles */
+body {
+    color: #ffffff;
+    background-color: #0e1117;
+}
+
+.stButton > button {
+    color: #ffffff;
+    background-color: #1e2129;
+    border-color: #4a4d56;
+}
+
+.stTextInput > div > div > input,
+.stSelectbox > div > div > select {
+    color: #ffffff;
+    background-color: #262730;
+    border-color: #4a4d56;
+}
+
+.stDataFrame {
+    color: #ffffff;
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+    .stApp {
+        padding: 1rem 0.5rem;
+    }
+
+    .stButton > button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .stTextInput > div > div > input,
+    .stSelectbox > div > div > select {
+        font-size: 16px; /* Prevent zoom on mobile */
+    }
+
+    .stExpander {
+        margin-bottom: 1rem;
+    }
+}
+
+/* General improvements */
+.stApp {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stButton > button {
+    border-radius: 20px;
+}
+
+.stExpander {
+    border: 1px solid #4a4d56;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #262730;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a4d56;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6e7180;
+}
+
+/* Top menu styles */
+.stHorizontal {
+    background-color: #1e2129;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #4a4d56;
+}
+
+.stHorizontal > div > div > div > div > button {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #262730;
+    color: #ffffff;
+    border: 1px solid #4a4d56;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+.stHorizontal > div > div > div > div > button:hover {
+    background-color: #4a4d56;
+    color: #ffffff;
+    border-color: #6e7180;
+}
+
+/* Responsive top menu */
+@media (max-width: 768px) {
+    .stHorizontal {
+        flex-direction: column;
+    }
+
+    .stHorizontal > div {
+        width: 100% !important;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Active menu item */
+.stHorizontal > div > div > div > div > button[data-baseweb="button"]:focus {
+    background-color: #4a4d56;
+    color: #ffffff;
+    border-color: #6e7180;
+    box-shadow: none;
+}
